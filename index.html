@@ -49,6 +49,7 @@
             <div class="swiper-slide"><img src="slides/Slide16.PNG" alt="Slide 16"></div>
             <div class="swiper-slide"><img src="slides/Slide17.PNG" alt="Slide 17"></div>
             <div class="swiper-slide"><img src="slides/Slide18.PNG" alt="Slide 18"></div>
+
         </div>
         <!-- Adicione botões de navegação -->
         <div class="swiper-button-next"></div>
@@ -69,6 +70,14 @@
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowRight') {
+                swiper.slideNext();
+            } else if (event.key === 'ArrowLeft') {
+                swiper.slidePrev();
+            }
         });
     </script>
 </body>
